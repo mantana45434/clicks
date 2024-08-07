@@ -1,32 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    
+<!-- Mirrored from booms.io/game/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 05:37:03 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App Game</title>
-    <link rel="stylesheet" href="https://github.com/mantana45434/clicks/blob/main/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Ice Manager</h1>
-            <div class="score">335,623</div>
-        </div>
-        <div class="game">
-            <img src="glacial_manager.png" alt="Glacial Manager">
-            <div class="energy">
-                <span>2407 / 2500</span>
-                <button id="boost">Boost</button>
-            </div>
-        </div>
-        <div class="footer">
-            <button class="footer-btn" id="game">Game</button>
-            <button class="footer-btn" id="mine">Mine</button>
-            <button class="footer-btn" id="friends">Friends</button>
-            <button class="footer-btn" id="earn">Earn</button>
-            <button class="footer-btn" id="airdrop">Airdrop</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <!--
+          If you are serving your web app in a path other than the root, change the
+          href value below to reflect the base path you are serving from.
+
+          The path provided below has to start and end with a slash "/" in order for
+          it to work correctly.
+
+          For more details:
+          * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+          This is a placeholder for base href that will be replaced by the value of
+          the `--base-href` argument provided to `flutter build`.
+        -->
+        <base href="/game/">
+
+        <meta charset="UTF-8">
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+        <meta content="" name="description">
+
+        <!-- iOS meta tags & icons -->
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="booms" name="apple-mobile-web-app-title">
+        <link href="icons/Icon-192.png" rel="apple-touch-icon">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+
+        <title>Booms</title>
+        <link href="manifest.json" rel="manifest">
+
+        <!-- Telegram Web App -->
+        <script src="../../telegram.org/js/telegram-web-app.js" defer=""></script>
+
+        <!-- Native splash screen -->
+        <style id="splash-screen-style">
+            html {
+              height: 100%
+            }
+
+            body {
+              margin: 0;
+              min-height: 100%;
+              background-color: #0B1321;
+              background-size: 100% 100%;
+            }
+
+            .center {
+              margin: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            .contain {
+              display:block;
+              width:100%; height:100%;
+              object-fit: contain;
+            }
+
+            .stretch {
+              display:block;
+              width:100%; height:100%;
+            }
+
+            .cover {
+              display:block;
+              width:100%; height:100%;
+              object-fit: cover;
+            }
+
+            .bottom {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              -ms-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+            }
+
+            .bottomLeft {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+
+            .bottomRight {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+        </style>
+        <script id="splash-screen-script">
+            function removeSplashFromWeb() {
+              document.getElementById("splash")?.remove();
+              document.getElementById("splash-branding")?.remove();
+              // document.body.style.background = "transparent";
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NZTZ52C6');</script>
+        <!-- End Google Tag Manager -->
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+              name="viewport">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZTZ52C6"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <picture id="splash">
+            <source media="(prefers-color-scheme: light)"
+                    srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x">
+            <source media="(prefers-color-scheme: dark)"
+                    srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x">
+            <img alt="" aria-hidden="true" class="center" src="splash/img/light-1x.png">
+        </picture>
+        <script src="flutter_bootstrap.js" async></script>
+    </body>
+
+<!-- Mirrored from booms.io/game/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 05:37:05 GMT -->
 </html>
